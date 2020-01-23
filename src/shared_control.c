@@ -91,7 +91,7 @@ has_control_or_spectator(HouseClass *h)
 void __thiscall
 GrantControl_Execute()
 {
-    if (SessionType.GameSession && !PlayerPtr->Defeated && SharedControl)
+    if (SessionClass_this.GameSession && !PlayerPtr->Defeated && SharedControl)
     {
         if (CurrentObjectsArray.ActiveCount > 0)
         {

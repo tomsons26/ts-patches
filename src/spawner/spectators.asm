@@ -5,8 +5,8 @@
 
 cglobal IsSpectatorArray
 cglobal SpectatorStuffInit
-cglobal Load_Spectators_Spawner
 
+cextern Load_Spectators_Spawner
 cextern INIClass_SPAWN
 cextern SpawnerActive
 
@@ -210,34 +210,6 @@ _sub_5B9B90_Set_Up_Spectator_Player_Stuff:
     jmp 0x005B9D04
 
 section .text
-
-Load_Spectators_Spawner:
-    SpawnINI_Get_Bool str_IsSpectator, str_Multi1, 0
-    mov dword [IsSpectatorArray+0], eax
-
-    SpawnINI_Get_Bool str_IsSpectator, str_Multi2, 0
-    mov dword [IsSpectatorArray+4], eax
-
-    SpawnINI_Get_Bool str_IsSpectator, str_Multi3, 0
-    mov dword [IsSpectatorArray+8], eax
-
-    SpawnINI_Get_Bool str_IsSpectator, str_Multi4, 0
-    mov dword [IsSpectatorArray+12], eax
-
-    SpawnINI_Get_Bool str_IsSpectator, str_Multi5, 0
-    mov dword [IsSpectatorArray+16], eax
-
-    SpawnINI_Get_Bool str_IsSpectator, str_Multi6, 0
-    mov dword [IsSpectatorArray+20], eax
-
-    SpawnINI_Get_Bool str_IsSpectator, str_Multi7, 0
-    mov dword [IsSpectatorArray+24], eax
-
-    SpawnINI_Get_Bool str_IsSpectator, str_Multi8, 0
-    mov dword [IsSpectatorArray+28], eax
-
-    retn
-
 _TechnoClass_Draw_Health_Boxes_unit_draw_pips:
 @CALL 0x0062C6CE, HouseClass__Is_Ally_Or_Spec_HH
 

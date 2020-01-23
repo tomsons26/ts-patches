@@ -200,6 +200,8 @@ setcglob 0x007E4548, SpecialClass__Special
 setcglob 0x005DE580, Create_Units
 setcglob 0x007E2650, CriticalRandomNumber
 setcglob 0x00805E10, MapSeed
+setcglob 0x007E48FC, InScenario1
+setcglob 0x007E4040, InScenario2
 
 ; Save games
 setcglob 0x005D6910, Load_Game
@@ -283,6 +285,7 @@ setcglob 0x005F38C0, SidebarClass__Blit
 setcglob 0x005F3560, SidebarClass__Draw_It
 setcglob 0x005F2720, SidebarClass__Init_IO
 setcglob 0x005F2900, SidebarClass__Init_For_House
+setcglob 0x005F3E60, SidebarClass__Activate
 
 ; clib
 setcglob 0x006B73A0, __strcmpi
@@ -317,6 +320,7 @@ setcglob 0x006B4D6C, sendto
 setcglob 0x006B4D66, recvfrom
 setcglob 0x006B4D24, htonl
 setcglob 0x006B4D2A, htons
+setcglob 0x006CA528, _imp__htons
 
 ;;;
 setcglob 0x007481A8, DynamicVectorClass__CommandClass
@@ -351,6 +355,13 @@ setcglob 0x004E8C40, CreateTeamCommandClass_Execute
 setcglob 0x004E90D0, CenterTeamCommandClass_Execute
 setcglob 0x004EAB00, ScreenCaptureCommandClass_Execute
 setcglob 0x005B10F0, Queue_Options
+setcglob 0x004E1DE0, Select_Game
+setcglob 0x006F2638, TiberianSunMode
+setcglob 0x006F263C, FirestormMode
+setcglob 0x00462C60, Call_Back
+setcglob 0x004E3460, Parse_Command_Line
+setcglob 0x006B6730, strstr
+setcglob 0x005AD9A0, Progress_5AD9A0
 
 ;WSOCK32
 setcglob 0x006CA504, _imp__sendto
@@ -392,7 +403,7 @@ setcglob 0x006CA1E8, _imp__WaitForSingleObject
 setcglob 0x006CA1F0, _imp__ReleaseMutex
 setcglob 0x006CA144, _imp__ResetEvent
 setcglob 0x006Ca15C, _imp__SetEvent
-
+setcglob 0x006CA458, _imp__MessageBoxA
 
 ; Theme
 setcglob 0x00644190, Theme__Stop

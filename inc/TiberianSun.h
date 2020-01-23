@@ -90,7 +90,7 @@ extern uint32_t WOLGameID;
 extern bool OutOfSync;
 extern DynamicVectorClass_Objects CurrentObjectsArray;
 extern DynamicVectorClass_Houses HouseClassArray;
-extern SessionClass SessionType;
+extern int SessionType;
 extern SessionClass SessionClass_this;
 extern WWKeyboardClass *WWKeyboard;
 extern uint32_t ForceFire1;
@@ -146,6 +146,11 @@ bool   __thiscall CCFileClass__Open(CCFileClass *fileClass, int mode);
 void   __thiscall CCFileClass__Close(CCFileClass);
 bool   __thiscall RawFileCalss__Create(RawFileClass *file);
 
+
+//(INIClass iniClass) WRONG WRONG WRONG WRONG
+bool __thiscall INIClass__INIClass(INIClass iniClass);
+bool __thiscall INIClass__GetBool(INIClass iniClass, char *section, char *key, bool defaultValue);
+bool __thiscall INIClass__Load(INIClass iniClass, FileClass file);
 bool __thiscall INIClass__GetBool(INIClass iniClass, char *section, char *key, bool defaultValue);
 int  __thiscall INIClass__GetInt(INIClass iniClass, char *section, char *key, int defaultValue);
 char * __thiscall INIClass__GetEntry(INIClass iniClass, char *section,  int i);
@@ -182,7 +187,7 @@ void MapClass__Reveal_The_Map();
 void __thiscall MapClass__Fill_Map_With_Fog(MouseClass *this);
 void __thiscall GScreenClass__Input(MouseClass *Map, int, int, int);
 void __thiscall GScreenClass__Render(MouseClass *Map);
-void __thiscall GScreenClass__Flag_To_Redraw(MouseClass *Map);
+void __thiscall GScreenClass__Flag_To_Redraw(MouseClass *Map, int);
 void __thiscall SidebarClass__StripClass__Flag_To_Redraw(void *this);
 void __thiscall SidebarClass__Blit(void *this, char a2);
 void __thiscall SidebarClass__Draw_It(MouseClass *Map, char a2);

@@ -59,6 +59,7 @@ MP_OBJS          = \
                     src/short_connection_timeout.o \
                     src/spawner/is_ally_or_spec.o \
                     src/spawner/spawner.o \
+                    src/spawner/spawnernew.o \
                     src/spawner/protocol_zero.o \
                     src/spawner/protocol_zero_c.o \
                     src/spawner/nethack.o \
